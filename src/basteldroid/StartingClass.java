@@ -1,5 +1,5 @@
 package basteldroid;
-
+//http://www.basteldroid.de/lektion-6-gegner/
 import java.applet.Applet;
 import java.awt.Color;
 import java.awt.Frame;
@@ -35,11 +35,11 @@ public class StartingClass extends Applet implements Runnable, KeyListener {
 
 
 		// Bildeinstellung
-	    character = getImage(base, "data/character.png");
-	    characterDown = getImage(base, "data/down.png");
-	    characterJumped = getImage(base, "data/jumped.png");
+	    character = getImage(base, "data\\character.png");
+	    characterDown = getImage(base, "data\\down.png");
+	    characterJumped = getImage(base, "data\\jumped.png");
 	    currentSprite = character;
-	    background = getImage(base, "data/background.png");
+	    background = getImage(base, "data\\background.png");
 	}
 
 	@Override

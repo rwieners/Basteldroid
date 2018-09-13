@@ -1,10 +1,10 @@
 package basteldroid;
 
-import java.awt.Graphics;
+import java.util.ArrayList;
 
 public class Robot {
-	 	//Variablen welche nur in einer Klasse benÃ¶tigt werden, sollten Privat sein
-		//So kÃ¶nnen nur die dazugehÃ¶rigen Methoden diese Ã¤ndern.
+	 	//Variablen welche nur in einer Klasse benötigt werden, sollten Privat sein
+		//So können nur die dazugehörigen Methoden diese ändern.
 		final int JUMPSPEED = -15;
 		final int MOVESPEED = 5;
 		final int GROUND = 382;
@@ -15,6 +15,7 @@ public class Robot {
 		private boolean movingLeft = false;
 	    private boolean movingRight = false;
 	    private boolean ducked = false;
+	    private ArrayList<Projectile> projectiles = new ArrayList<Projectile>();
 	    
 	    	private static Background bg1 = StartingClass.getBg1();                 
 	    	private static Background bg2 = StartingClass.getBg2();
@@ -61,9 +62,9 @@ public class Robot {
 		        }
 
 			// Verhindert das unsere Spielfigur einen gewissen Punkt
-			// in X Richtung Ã¼berschreitet
+			// in X Richtung überschreitet
 			if (centerX + speedX <= 60) { 
-			// falls bei addieren von speedX centerX auf kleiner als 60 fÃ¤llt, 
+			// falls bei addieren von speedX centerX auf kleiner als 60 fällt, 
 		        // ist speedX = 61
 				centerX = 61;
 			}
@@ -112,6 +113,11 @@ public class Robot {
 	            jumped = true;
 	        }
 
+		}
+		
+		public void shoot() {
+			Projectile p = new Projectile(centerX + 50, centerY - 25);
+			projectiles.add(p);
 		}
 
 		public int getJUMPSPEED() {
@@ -206,4 +212,7 @@ public class Robot {
 			this.speedY = speedY;
 		}
 		
+	 	public ArrayList getProjectiles() {
+			return projectiles;
+		}
 }

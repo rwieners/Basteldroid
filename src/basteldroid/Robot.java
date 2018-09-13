@@ -3,8 +3,8 @@ package basteldroid;
 import java.awt.Graphics;
 
 public class Robot {
-	 	//Variablen welche nur in einer Klasse benötigt werden, sollten Privat sein
-		//So können nur die dazugehörigen Methoden diese ändern.
+	 	//Variablen welche nur in einer Klasse benÃ¶tigt werden, sollten Privat sein
+		//So kÃ¶nnen nur die dazugehÃ¶rigen Methoden diese Ã¤ndern.
 		final int JUMPSPEED = -15;
 		final int MOVESPEED = 5;
 		final int GROUND = 382;
@@ -61,9 +61,9 @@ public class Robot {
 		        }
 
 			// Verhindert das unsere Spielfigur einen gewissen Punkt
-			// in X Richtung überschreitet
+			// in X Richtung Ã¼berschreitet
 			if (centerX + speedX <= 60) { 
-			// falls bei addieren von speedX centerX auf kleiner als 60 fällt, 
+			// falls bei addieren von speedX centerX auf kleiner als 60 fÃ¤llt, 
 		        // ist speedX = 61
 				centerX = 61;
 			}

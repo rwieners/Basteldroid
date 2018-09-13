@@ -1,74 +1,75 @@
 package basteldroid;
 
 public class Enemy {
-
+	
 	private int maxHealth, currentHealth, power, speedX, centerX, centerY;
 	private Background bg = StartingClass.getBg1();
 	
-	//Verhaltensmethoden
-			public void update() {
-				centerX += speedX;
-				speedX = bg.getSpeedX();
-				}
-	 
-			public void die() {
-			}
-			public void attack() {
+		//Verhaltensmethoden
+		public void update() {
+			centerX += speedX;
+			speedX = bg.getSpeedX();
 			}
 
-			public int getMaxHealth() {
-				return maxHealth;
-			}
+		public void die() {
+		}
+		public void attack() {
+		}
 
-			public int getCurrentHealth() {
-				return currentHealth;
-			}
+		public int getMaxHealth() {
+			return maxHealth;
+		}
 
-			public int getPower() {
-				return power;
-			}
+		public int getCurrentHealth() {
+			return currentHealth;
+		}
 
-			public int getSpeedX() {
-				return speedX;
-			}
+		public int getPower() {
+			return power;
+		}
 
-			public int getCenterX() {
-				return centerX;
-			}
+		public int getSpeedX() {
+			return speedX;
+		}
 
-			public int getCenterY() {
-				return centerY;
-			}
+		public int getCenterX() {
+			return centerX;
+		}
 
-			public Background getBg() {
-				return bg;
-			}
+		public int getCenterY() {
+			return centerY;
+		}
 
-			public void setMaxHealth(int maxHealth) {
-				this.maxHealth = maxHealth;
-			}
+		public Background getBg() {
+			return bg;
+		}
 
-			public void setCurrentHealth(int currentHealth) {
-				this.currentHealth = currentHealth;
-			}
+		public void setMaxHealth(int maxHealth) {
+			this.maxHealth = maxHealth;
+		}
 
-			public void setPower(int power) {
-				this.power = power;
-			}
+		public void setCurrentHealth(int currentHealth) {
+			this.currentHealth = currentHealth;
+		}
 
-			public void setSpeedX(int speedX) {
-				this.speedX = speedX;
-			}
+		public void setPower(int power) {
+			this.power = power;
+		}
 
-			public void setCenterX(int centerX) {
-				this.centerX = centerX;
-			}
+		public void setSpeedX(int speedX) {
+			this.speedX = speedX;
+		}
 
-			public void setCenterY(int centerY) {
-				this.centerY = centerY;
-			}
+		public void setCenterX(int centerX) {
+			this.centerX = centerX;
+		}
 
-			public void setBg(Background bg) {
-				this.bg = bg;
-			}
+		public void setCenterY(int centerY) {
+			this.centerY = centerY;
+		}
+
+		public void setBg(Background bg) {
+			this.bg = bg;
+		}
+
 }

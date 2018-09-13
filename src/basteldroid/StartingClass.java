@@ -1,6 +1,5 @@
 package basteldroid;
-//http://www.basteldroid.de/lektion-6-gegner/
-//Test
+
 import java.applet.Applet;
 import java.awt.Color;
 import java.awt.Frame;
@@ -14,10 +13,11 @@ import java.net.URL;
 public class StartingClass extends Applet implements Runnable, KeyListener {
 
 	private Robot robot;
-	private Image image, currentSprite, character, characterDown, characterJumped, background;
+	private Image image, currentSprite, character, characterDown, characterJumped, background, heliboy;
 	private URL base;
 	private Graphics second;
 	private static Background bg1, bg2;
+	private Heliboy hb, hb2;
 	
 	@Override
 	public void init() {
@@ -41,6 +41,7 @@ public class StartingClass extends Applet implements Runnable, KeyListener {
 	    characterJumped = getImage(base, "data\\jumped.png");
 	    currentSprite = character;
 	    background = getImage(base, "data\\background.png");
+	    heliboy = getImage(base, "data\\heliboy.png");
 	}
 
 	@Override
@@ -48,6 +49,8 @@ public class StartingClass extends Applet implements Runnable, KeyListener {
 		bg1 = new Background(0, 0);
 		bg2 = new Background(2160, 0);
 		robot = new Robot();
+		hb = new Heliboy(340, 360);
+		hb2 = new Heliboy(700, 360);
 		
 		// TODO Auto-generated method stub
 		Thread thread = new Thread(this);
@@ -71,6 +74,8 @@ public class StartingClass extends Applet implements Runnable, KeyListener {
 			 bg1.update();
 			 bg2.update();
 			 robot.update();
+			 hb.update();
+			 hb2.update();
 			 if (robot.isJumped()){
 					currentSprite = characterJumped;
 				}else if (robot.isJumped() == false && robot.isDucked() == false){
@@ -113,6 +118,8 @@ public class StartingClass extends Applet implements Runnable, KeyListener {
 		g.drawImage(background, bg1.getBgX(), bg1.getBgY(), this);
 		g.drawImage(background, bg2.getBgX(), bg2.getBgY(), this);
 		g.drawImage(currentSprite, robot.getCenterX() - 61, robot.getCenterY() - 63, this);
+		g.drawImage(heliboy, hb.getCenterX() - 48, hb.getCenterY() - 48, this);
+		g.drawImage(heliboy, hb2.getCenterX() - 48, hb2.getCenterY() - 48, this);
 	}
 
 	@Override

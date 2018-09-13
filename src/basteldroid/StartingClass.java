@@ -34,7 +34,7 @@ public class StartingClass extends Applet implements Runnable, KeyListener {
 
 
 		// Bildeinstellung
-		character = getImage(base, "data/character.png");
+		character = getImage(base, "data\\character.png");
 	}
 
 	@Override

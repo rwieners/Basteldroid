@@ -1,5 +1,6 @@
 package basteldroid;
 //http://www.basteldroid.de/lektion-6-gegner/
+//Test
 import java.applet.Applet;
 import java.awt.Color;
 import java.awt.Frame;
